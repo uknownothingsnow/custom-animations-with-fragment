@@ -3,8 +3,4 @@ http://cyrilmottier.com/2014/05/20/custom-animations-with-fragments/
 
 All the explanations are given in his article so feel free to read it first.
 
-In my example you will find two different ways to implement the animation.
-The first one is as described in Cyril Mottier article.
-The second one is as suggested by Cyril, using a single animator instead of creating one animator each time an animation is processed.
-
 请使用最新版的Android Studio打开
