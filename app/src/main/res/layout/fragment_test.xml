@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/main_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:id="@+id/normal_mode_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/scrollview_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="16dip">
+
+            <LinearLayout
+                android:id="@+id/first_group_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/separator_height"
+                    android:layout_gravity="top"
+                    android:background="@drawable/divider_section_top"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@android:color/darker_gray"
+                        android:text="用户名"/>
+
+                    <IconTextView
+                        android:id="@+id/tv_click"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:gravity="center"
+                        android:text="{fa-android} 点击我"
+                        android:shadowColor="#22000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="1"
+                        android:textSize="20dp"
+                        android:textColor="#FF33B5E5"/>
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@android:color/holo_green_dark"
+                        android:text="邮箱"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/first_spacer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_below="@id/first_group_container"
+                android:background="#FFEAEAEA">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/separator_height"
+                    android:layout_gravity="top"
+                    android:background="@drawable/divider_section_bottom"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/second_group_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_group_container"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/separator_height"
+                    android:layout_gravity="top"
+                    android:background="@drawable/divider_section_top"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@android:color/darker_gray"
+                        android:text="密码"/>
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@android:color/holo_orange_dark"
+                        android:text="确认密码"/>
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@android:color/holo_green_dark"
+                        android:text="验证码"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/second_spacer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_below="@id/second_group_container"
+                android:background="#ffeaeaea">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/separator_height"
+                    android:layout_gravity="top"
+                    android:background="@drawable/divider_section_bottom"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/edit_mode_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="@dimen/view_height"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/separator_height"
+                android:layout_gravity="top"
+                android:background="@drawable/divider_section_top"/>
+
+            <FrameLayout
+                android:id="@+id/edit_mode_fragment_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/holo_purple"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
